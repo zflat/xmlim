@@ -1,5 +1,4 @@
 import { parse, XmlNode } from "fsp-xml-parser";
-import * as crypto from "node:crypto";
 
 /**
  *
@@ -42,12 +41,6 @@ const levelOrderTraverseQ = function (
   return output;
 };
 
-export function nodeId(node: XmlNode): string {
-  const md5Hasher = crypto.createHmac("md5", "");
-  const hash = md5Hasher.update(JSON.stringify(node)).digest("hex");
-  return hash;
-}
-
 export function chartFromXml(xml: string): boolean {
   // See https://github.com/FullStackPlayer/ts-xml-parser for parser usage
   const parsed = parse(xml, true);
@@ -61,7 +54,10 @@ export function chartFromXml(xml: string): boolean {
   console.log(levels);
 
   let chart = "stateDiagram-v2";
+  let levelCount = 0;
+  let n = 0;
   for (const level of levels) {
+    n = 0;
     for (const node of level) {
       let attribs = "";
       const attributes = node.attributes || {};
@@ -72,25 +68,50 @@ export function chartFromXml(xml: string): boolean {
       }
 
       chart +=
-        "\n    " + node.name + "_" + nodeId(node) + ": " + node.name + attribs;
+        "\n    " +
+        node.name +
+        "_l" +
+        levelCount +
+        "n" +
+        n +
+        ": " +
+        node.name +
+        attribs;
+      n++;
     }
+
+    levelCount++;
   }
 
+  levelCount = 0;
+  let m = 0;
   for (const level of levels) {
+    n = 0;
+    m = 0;
     for (const node of level) {
       const children = node.children || new Array<XmlNode>();
       for (const child of children) {
         chart +=
           "\n    " +
           node.name +
-          "_" +
-          nodeId(node) +
-          "--" +
+          "_l" +
+          levelCount +
+          "n" +
+          n +
+          "-->" +
           child.name +
-          "_" +
-          nodeId(child);
+          "_l" +
+          (levelCount + 1) +
+          "n" +
+          m;
+
+        m++;
       }
+
+      n++;
     }
+
+    levelCount++;
   }
 
   console.log(chart);
