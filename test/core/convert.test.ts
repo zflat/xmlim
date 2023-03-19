@@ -1,11 +1,11 @@
 import { expect, test } from "@oclif/test";
 
-import { parseXml } from "../../src/core/convert";
+import { chartFromXml } from "../../src/core/convert";
 
-const xmlCaseA = "<A><B><C /></B></A>";
+const xmlCaseA = `<A><B name="1"><C /></B><B name="2"/></A>`;
 
-describe("convert:from_xml", () => {
+describe("convert:chartFromXml", () => {
   test.it("reads xml", (_ctx) => {
-    expect(parseXml(xmlCaseA)).to.equal(true);
+    expect(chartFromXml(xmlCaseA)).to.equal(true);
   });
 });
