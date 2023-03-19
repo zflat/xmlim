@@ -41,17 +41,14 @@ const levelOrderTraverseQ = function (
   return output;
 };
 
-export function chartFromXml(xml: string): boolean {
+export function chartFromXml(xml: string): string {
   // See https://github.com/FullStackPlayer/ts-xml-parser for parser usage
   const parsed = parse(xml, true);
   if (parsed.root === undefined) {
-    return false;
+    return "";
   }
 
-  console.log(parsed);
-
   const levels = levelOrderTraverseQ(parsed.root);
-  console.log(levels);
 
   let chart = "stateDiagram-v2";
   let levelCount = 0;
@@ -114,7 +111,5 @@ export function chartFromXml(xml: string): boolean {
     levelCount++;
   }
 
-  console.log(chart);
-
-  return true;
+  return chart;
 }
