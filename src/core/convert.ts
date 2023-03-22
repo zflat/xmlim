@@ -59,7 +59,7 @@ export function chartFromXml(xml: string, formatter: ChartFormat): string {
     n = 0;
     for (const node of level) {
       const nodeId = `${node.name}_l${levelCount}n${n}`;
-      chart += formatter.nodeDecl(nodeId, node);
+      chart += formatter.nodeDecl({ level: levelCount, position: n }, node);
       n++;
     }
 
@@ -74,9 +74,9 @@ export function chartFromXml(xml: string, formatter: ChartFormat): string {
     for (const node of level) {
       const children = node.children || new Array<XmlNode>();
       for (const child of children) {
-        const idFrom = `${node.name}_l${levelCount}n${n}`;
-        const idTo = `${child.name}_l${levelCount + 1}n${m}`;
-        chart += formatter.nodeConnection(idFrom, idTo);
+        const coordFrom = { level: levelCount, position: n };
+        const coordTo = { level: levelCount + 1, position: m };
+        chart += formatter.nodeConnection(coordFrom, node, coordTo, child);
         m++;
       }
 
