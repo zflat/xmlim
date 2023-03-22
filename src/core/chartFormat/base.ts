@@ -3,7 +3,7 @@ import { XmlNode } from "fsp-xml-parser";
 export type NodeCoordinate = {
   level: number;
   position: number;
-}
+};
 
 export interface ChartFormat {
   chartHeader(): string;

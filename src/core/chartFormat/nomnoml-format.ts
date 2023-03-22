@@ -2,9 +2,9 @@ import { XmlNode } from "fsp-xml-parser";
 
 import { ChartFormat } from "./base";
 
-export function id (coord: [number, number]): string {
-    return `${coord[0]}, ${coord[1]}`;
-  };
+export function id(coord: [number, number]): string {
+  return `${coord[0]}, ${coord[1]}`;
+}
 
 export const format: ChartFormat = {
   chartHeader(): string {

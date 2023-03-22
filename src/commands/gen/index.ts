@@ -1,7 +1,12 @@
 import * as fs from "node:fs";
-import { Args, Command, Flags } from "@oclif/core";
-import { chartFromXml } from "../../core/convert";
+import * as path from "node:path";
+
 import * as nomnoml from "nomnoml";
+
+import { Args, Command, Flags } from "@oclif/core";
+
+import { chartFromXml } from "../../core/convert";
+import { format as nomnomlFormat } from "../../core/chartFormat/nomnoml-format";
 
 export default class Gen extends Command {
   static description = "Generate a diagram from a specified XML document";
@@ -20,9 +25,20 @@ export default class Gen extends Command {
 
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Gen);
-    this.log(`gen ${args.file} (./src/commands/gen/index.ts)`);
     const xml = fs.readFileSync(args.file, "utf8");
-    const chart = chartFromXml(xml);
-    console.log(nomnoml.renderSvg("[nomnoml] is -> [awesome]"));
+    const chart = chartFromXml(xml, nomnomlFormat);
+    const svg = nomnoml.renderSvg(chart);
+    const outputPath = `${path.dirname(args.file)}/${path
+      .basename(args.file)
+      .split(".")
+      .slice(0, -1)
+      .join(".")}.svg`;
+    fs.writeFile(outputPath, svg, (err) => {
+      if (err !== null) {
+        // this.error("Error writing chart to " + outputPath);
+      } else {
+        this.log("Wrote chart to " + outputPath);
+      }
+    });
   }
 }

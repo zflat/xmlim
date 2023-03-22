@@ -1,8 +1,8 @@
 import { expect, test } from "@oclif/test";
 
 import { chartFromXml } from "../../src/core/convert";
-import {format as mermaidFormat} from "../../src/core/chartFormat/mermaid-format";
-import {format as nomnomlFormat} from "../../src/core/chartFormat/nomnoml-format";
+import { format as mermaidFormat } from "../../src/core/chartFormat/mermaid-format";
+import { format as nomnomlFormat } from "../../src/core/chartFormat/nomnoml-format";
 
 const xmlCaseA = `
   <A>
@@ -34,10 +34,13 @@ const chartCaseAnommol = `
 
 describe("convert:chartFromXml", () => {
   test.it("reads xml", (_ctx) => {
-    expect(chartFromXml(xmlCaseA, mermaidFormat)).to.equal(chartCaseAmmd.trim());
+    expect(chartFromXml(xmlCaseA, mermaidFormat)).to.equal(
+      chartCaseAmmd.trim()
+    );
   });
   test.it("reads xml", (_ctx) => {
-    expect(chartFromXml(xmlCaseA, nomnomlFormat)).to.equal(chartCaseAnommol.trim());
+    expect(chartFromXml(xmlCaseA, nomnomlFormat)).to.equal(
+      chartCaseAnommol.trim()
+    );
   });
-
 });
