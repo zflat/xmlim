@@ -342,4 +342,4 @@ DESCRIPTION
 
 - CLI created using [oclif](https://github.com/oclif/oclif)
 - XML parsing using https://github.com/FullStackPlayer/ts-xml-parser
-- Diagram generation using https://mermaid.js.org/
+- Diagram generation using https://www.nomnoml.com/

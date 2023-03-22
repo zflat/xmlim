@@ -21,7 +21,7 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.4.0",
     "fsp-xml-parser": "^1.0.0",
-    "mermaid": "^10.0.2"
+    "nomnoml": "^1.5.3"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.10",

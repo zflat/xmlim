@@ -1,5 +1,7 @@
 import { parse, XmlNode } from "fsp-xml-parser";
 
+import { ChartFormat } from "./chartFormat/base";
+
 /**
  *
  * Level order traversal of XmlNode
@@ -41,7 +43,7 @@ const levelOrderTraverseQ = function (
   return output;
 };
 
-export function chartFromXml(xml: string): string {
+export function chartFromXml(xml: string, formatter: ChartFormat): string {
   // See https://github.com/FullStackPlayer/ts-xml-parser for parser usage
   const parsed = parse(xml, true);
   if (parsed.root === undefined) {
@@ -50,30 +52,14 @@ export function chartFromXml(xml: string): string {
 
   const levels = levelOrderTraverseQ(parsed.root);
 
-  let chart = "stateDiagram-v2";
+  let chart = formatter.chartHeader();
   let levelCount = 0;
   let n = 0;
   for (const level of levels) {
     n = 0;
     for (const node of level) {
-      let attribs = "";
-      const attributes = node.attributes || {};
-      for (const attrKey in attributes) {
-        if (Object.prototype.hasOwnProperty.call(attributes, attrKey)) {
-          attribs += "\\n" + attrKey + "=" + attributes[attrKey];
-        }
-      }
-
-      chart +=
-        "\n    " +
-        node.name +
-        "_l" +
-        levelCount +
-        "n" +
-        n +
-        ": " +
-        node.name +
-        attribs;
+      const nodeId = `${node.name}_l${levelCount}n${n}`;
+      chart += formatter.nodeDecl(nodeId, node);
       n++;
     }
 
@@ -88,20 +74,9 @@ export function chartFromXml(xml: string): string {
     for (const node of level) {
       const children = node.children || new Array<XmlNode>();
       for (const child of children) {
-        chart +=
-          "\n    " +
-          node.name +
-          "_l" +
-          levelCount +
-          "n" +
-          n +
-          "-->" +
-          child.name +
-          "_l" +
-          (levelCount + 1) +
-          "n" +
-          m;
-
+        const idFrom = `${node.name}_l${levelCount}n${n}`;
+        const idTo = `${child.name}_l${levelCount + 1}n${m}`;
+        chart += formatter.nodeConnection(idFrom, idTo);
         m++;
       }
 
