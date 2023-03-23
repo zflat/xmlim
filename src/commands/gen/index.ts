@@ -7,6 +7,7 @@ import { Args, Command, Flags, ux } from "@oclif/core";
 
 import { chartFromXml } from "../../core/convert";
 import { format as nomnomlFormat } from "../../core/chartFormat/nomnoml-format";
+import { format as mermaidFormat } from "../../core/chartFormat/mermaid-format";
 
 export default class Gen extends Command {
   static description = "Generate a diagram from a specified XML document";
@@ -35,7 +36,6 @@ export default class Gen extends Command {
 
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Gen);
-    ux.action.start("Reading XML data");
     const xml = fs.readFileSync(args.file, "utf8");
 
     if (flags.format === "svg") {
@@ -57,6 +57,7 @@ export default class Gen extends Command {
       ux.action.stop();
       this.log("Wrote chart to " + outputPath);
     } else if (flags.format === "mermaid") {
+      this.log(chartFromXml(xml, mermaidFormat))
     }
   }
 }
