@@ -58,7 +58,6 @@ export function chartFromXml(xml: string, formatter: ChartFormat): string {
   for (const level of levels) {
     n = 0;
     for (const node of level) {
-      const nodeId = `${node.name}_l${levelCount}n${n}`;
       chart += formatter.nodeDecl({ level: levelCount, position: n }, node);
       n++;
     }

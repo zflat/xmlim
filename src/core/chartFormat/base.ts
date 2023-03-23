@@ -1,11 +1,7 @@
 import { XmlNode } from "fsp-xml-parser";
 
 export function formattedAttrVal(val: string): string {
-
-    return (val.length <= 13) ? val :
-
-    `${val.slice(0, 5)}...${val.slice(val.length - 5)}`;
-
+  return val.length <= 13 ? val : `${val.slice(0, 5)}...${val.slice(-5)}`;
 }
 
 export type NodeCoordinate = {
