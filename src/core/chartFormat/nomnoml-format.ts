@@ -1,6 +1,6 @@
 import { XmlNode } from "fsp-xml-parser";
 
-import { ChartFormat, NodeCoordinate } from "./base";
+import { ChartFormat, NodeCoordinate, formattedAttrVal } from "./base";
 
 export function id(coord: NodeCoordinate, node: XmlNode): string {
   return `${node.name} (${coord.position}, ${coord.level})`;
@@ -16,7 +16,7 @@ export const format: ChartFormat = {
     const attributes = node.attributes || {};
     for (const attrKey in attributes) {
       if (Object.prototype.hasOwnProperty.call(attributes, attrKey)) {
-        attribs += ";" + attrKey + "=" + attributes[attrKey];
+        attribs += ";" + attrKey + "=" + formattedAttrVal(attributes[attrKey]);
       }
     }
 

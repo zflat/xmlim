@@ -3,7 +3,7 @@ import * as path from "node:path";
 
 import * as nomnoml from "nomnoml";
 
-import { Args, Command, Flags } from "@oclif/core";
+import { Args, Command, Flags, ux } from "@oclif/core";
 
 import { chartFromXml } from "../../core/convert";
 import { format as nomnomlFormat } from "../../core/chartFormat/nomnoml-format";
@@ -25,9 +25,13 @@ export default class Gen extends Command {
 
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Gen);
+    ux.action.start("Reading XML data");
     const xml = fs.readFileSync(args.file, "utf8");
+    ux.action.start("Generating diagram format");
     const chart = chartFromXml(xml, nomnomlFormat);
+    ux.action.start("Rendering diagram");
     const svg = nomnoml.renderSvg(chart);
+    ux.action.start("Saving diagram to file");
     const outputPath = `${path.dirname(args.file)}/${path
       .basename(args.file)
       .split(".")
@@ -35,10 +39,10 @@ export default class Gen extends Command {
       .join(".")}.svg`;
     fs.writeFile(outputPath, svg, (err) => {
       if (err !== null) {
-        // this.error("Error writing chart to " + outputPath);
-      } else {
-        this.log("Wrote chart to " + outputPath);
+        throw err;
       }
     });
+    ux.action.stop();
+    this.log("Wrote chart to " + outputPath);
   }
 }
