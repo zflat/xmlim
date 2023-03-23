@@ -23,22 +23,22 @@ stateDiagram-v2
     B_l1n0-->C_l2n0
 `;
 const chartCaseAnommol = `
-[A_l0n0; A]
-[B_l1n0; B;name=1]
-[B_l1n1; B;name=2]
-[C_l2n0; C]
-[A_l0n0]->[B_l1n0]
-[A_l0n0]->[B_l1n1]
-[B_l1n0]->[C_l2n0]
+[A (0, 0)]
+[B (0, 1);name=1]
+[B (1, 1);name=2]
+[C (0, 2)]
+[A (0, 0)]->[B (0, 1)]
+[A (0, 0)]->[B (1, 1)]
+[B (0, 1)]->[C (0, 2)]
 `;
 
 describe("convert:chartFromXml", () => {
-  test.it("reads xml", (_ctx) => {
+  test.it("formats as mermaid", (_ctx) => {
     expect(chartFromXml(xmlCaseA, mermaidFormat)).to.equal(
       chartCaseAmmd.trim()
     );
   });
-  test.it("reads xml", (_ctx) => {
+  test.it("formats as nomnoml", (_ctx) => {
     expect(chartFromXml(xmlCaseA, nomnomlFormat)).to.equal(
       chartCaseAnommol.trim()
     );

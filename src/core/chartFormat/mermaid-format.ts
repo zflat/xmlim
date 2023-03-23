@@ -1,25 +1,34 @@
 import { XmlNode } from "fsp-xml-parser";
 
-import { ChartFormat } from "./base";
+import { ChartFormat, NodeCoordinate, formattedAttrVal } from "./base";
+
+export function id(coord: NodeCoordinate, node: XmlNode): string {
+  return `${node.name}_l${coord.level}n${coord.position}`;
+}
 
 export const format: ChartFormat = {
   chartHeader(): string {
     return "stateDiagram-v2";
   },
 
-  nodeDecl(id: string, node: XmlNode): string {
+  nodeDecl(coord: NodeCoordinate, node: XmlNode): string {
     let attribs = "";
     const attributes = node.attributes || {};
     for (const attrKey in attributes) {
       if (Object.prototype.hasOwnProperty.call(attributes, attrKey)) {
-        attribs += "\\n" + attrKey + "=" + attributes[attrKey];
+        attribs += "\\n" + attrKey + "=" + formattedAttrVal(attributes[attrKey]);
       }
     }
 
-    return `\n    ${id}: ${node.name}${attribs}`;
+    return `\n    ${id(coord, node)}: ${node.name}${attribs}`;
   },
 
-  nodeConnection(idFrom: string, idTo: string): string {
-    return `\n    ${idFrom}-->${idTo}`;
+  nodeConnection(
+    coordFrom: NodeCoordinate,
+    nodeFrom: XmlNode,
+    coordTo: NodeCoordinate,
+    nodeTo: XmlNode
+  ): string {
+    return `\n    ${id(coordFrom, nodeFrom)}-->${id(coordTo, nodeTo)}`;
   },
 };

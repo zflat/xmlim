@@ -85,5 +85,5 @@ export function chartFromXml(xml: string, formatter: ChartFormat): string {
     levelCount++;
   }
 
-  return chart;
+  return chart.trim();
 }
