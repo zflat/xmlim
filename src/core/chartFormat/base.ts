@@ -1,7 +1,7 @@
 import { XmlElement } from "@rgrove/parse-xml";
 
 export function formattedAttrVal(val: string): string {
-  return val.length <= 13 ? val : `${val.slice(0, 5)}...${val.slice(-5)}`;
+  return val.length <= 23 ? val : `${val.slice(0, 10)}...${val.slice(-10)}`;
 }
 
 export type NodeCoordinate = {
