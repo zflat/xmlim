@@ -57,7 +57,7 @@ export default class Gen extends Command {
       ux.action.stop();
       this.log("Wrote chart to " + outputPath);
     } else if (flags.format === "mermaid") {
-      this.log(chartFromXml(xml, mermaidFormat))
+      this.log(chartFromXml(xml, mermaidFormat));
     }
   }
 }

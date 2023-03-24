@@ -1,8 +1,8 @@
-import { XmlNode } from "fsp-xml-parser";
+import { XmlElement } from "@rgrove/parse-xml";
 
 import { ChartFormat, NodeCoordinate, formattedAttrVal } from "./base";
 
-export function id(coord: NodeCoordinate, node: XmlNode): string {
+export function id(coord: NodeCoordinate, node: XmlElement): string {
   return `${node.name} (${coord.position}, ${coord.level})`;
 }
 
@@ -11,7 +11,7 @@ export const format: ChartFormat = {
     return "";
   },
 
-  nodeDecl(coord: NodeCoordinate, node: XmlNode): string {
+  nodeDecl(coord: NodeCoordinate, node: XmlElement): string {
     let attribs = "";
     const attributes = node.attributes || {};
     for (const attrKey in attributes) {
@@ -25,9 +25,9 @@ export const format: ChartFormat = {
 
   nodeConnection(
     coordFrom: NodeCoordinate,
-    nodeFrom: XmlNode,
+    nodeFrom: XmlElement,
     coordTo: NodeCoordinate,
-    nodeTo: XmlNode
+    nodeTo: XmlElement
   ): string {
     const idFrom = id(coordFrom, nodeFrom);
     const idTo = id(coordTo, nodeTo);

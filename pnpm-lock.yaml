@@ -5,6 +5,7 @@ specifiers:
   "@oclif/plugin-help": ^5
   "@oclif/plugin-plugins": ^2.4.0
   "@oclif/test": ^2.3.10
+  "@rgrove/parse-xml": ^4.1.0
   "@types/chai": ^4
   "@types/mocha": ^9.0.0
   "@types/node": ^16.18.14
@@ -13,7 +14,6 @@ specifiers:
   eslint-config-oclif: ^4
   eslint-config-oclif-typescript: ^1.0.3
   eslint-config-prettier: ^8.7.0
-  fsp-xml-parser: ^1.0.0
   mocha: ^9
   nomnoml: ^1.5.3
   oclif: ^3
@@ -27,7 +27,7 @@ dependencies:
   "@oclif/core": 2.6.4_65w256gcgmxfcz3fxhbqinpra4
   "@oclif/plugin-help": 5.2.8_65w256gcgmxfcz3fxhbqinpra4
   "@oclif/plugin-plugins": 2.4.3_65w256gcgmxfcz3fxhbqinpra4
-  fsp-xml-parser: 1.0.0
+  "@rgrove/parse-xml": 4.1.0
   nomnoml: 1.5.3
 
 devDependencies:
@@ -997,6 +997,14 @@ packages:
     dependencies:
       "@octokit/openapi-types": 12.11.0
     dev: true
+
+  /@rgrove/parse-xml/4.1.0:
+    resolution:
+      {
+        integrity: sha512-pBiltENdy8SfI0AeR1e5TRpS9/9Gl0eiOEt6ful2jQfzsgvZYWqsKiBWaOCLdocQuk0wS7KOHI37n0C1pnKqTw==,
+      }
+    engines: { node: ">=14.0.0" }
+    dev: false
 
   /@sindresorhus/is/4.6.0:
     resolution:
@@ -3328,13 +3336,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /fsp-xml-parser/1.0.0:
-    resolution:
-      {
-        integrity: sha512-/8AsntW1A/+N/78Ki/cYV7jaZMVir9zo7dUHjPtiia+M53PbVNzdaSyJPNKNt0sImcWM6UdrprgbjlVr8VJGTw==,
-      }
-    dev: false
 
   /function-bind/1.1.1:
     resolution:
