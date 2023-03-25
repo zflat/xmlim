@@ -15,7 +15,7 @@ Given the following XML:
 </A>
 ```
 
-The following diagram is generated:
+This diagram is generated:
 
 ![example_diagram](test/examples/example1.svg)
 
