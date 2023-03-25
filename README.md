@@ -7,7 +7,7 @@ xmlim (pronounced ex-em-el-im) is a CLI for generating diagrams of XML documents
 - [Example](#example-diagram)
 - [Usage](#usage)
 - [Commands](#commands)
-- [Implementation Nodes](#implemention-notes)
+- [Implementation Notes](#implementation-notes)
 <!-- tocstop -->
 
 
