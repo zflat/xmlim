@@ -6,5 +6,6 @@
 /package-lock.json
 /tmp
 /yarn.lock
+/pnpm-lock.yaml
 node_modules
 oclif.manifest.json
