@@ -1,6 +1,6 @@
 import { XmlElement } from "@rgrove/parse-xml";
 
-import { ChartFormat, NodeCoordinate, formattedAttrVal } from "./base";
+import { ChartFormat, NodeCoordinate, formattedAttrVal } from "./";
 
 export function id(coord: NodeCoordinate, node: XmlElement): string {
   return `${node.name} (${coord.position}, ${coord.level})`;

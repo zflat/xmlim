@@ -5,9 +5,9 @@ import * as nomnoml from "nomnoml";
 
 import { Args, Command, Flags, ux } from "@oclif/core";
 
-import { chartFromXml } from "../../core/convert";
-import { format as nomnomlFormat } from "../../core/chartFormat/nomnoml-format";
-import { format as mermaidFormat } from "../../core/chartFormat/mermaid-format";
+import { chartFromXml } from "../../lib/convert";
+import { format as nomnomlFormat } from "../../lib/chartFormat/nomnoml-format";
+import { format as mermaidFormat } from "../../lib/chartFormat/mermaid-format";
 
 export default class Gen extends Command {
   static description = "Generate a diagram from a specified XML document";

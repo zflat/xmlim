@@ -1,6 +1,6 @@
 import { parseXml, XmlDocument, XmlNode, XmlElement } from "@rgrove/parse-xml";
 
-import { ChartFormat } from "./chartFormat/base";
+import { ChartFormat } from "./chartFormat";
 
 /**
  *

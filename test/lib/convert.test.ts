@@ -1,8 +1,8 @@
 import { expect, test } from "@oclif/test";
 
-import { chartFromXml } from "../../src/core/convert";
-import { format as mermaidFormat } from "../../src/core/chartFormat/mermaid-format";
-import { format as nomnomlFormat } from "../../src/core/chartFormat/nomnoml-format";
+import { chartFromXml } from "../../src/lib/convert";
+import { format as mermaidFormat } from "../../src/lib/chartFormat/mermaid-format";
+import { format as nomnomlFormat } from "../../src/lib/chartFormat/nomnoml-format";
 
 const xmlCaseA = `
   <A>
