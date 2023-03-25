@@ -31,7 +31,8 @@ USAGE
 <!-- commands -->
 
 - [`xmlim gen PATH`](#xmlim-gen-path)
-- [`xmlim watch PATH`](#xmlim-watch-path)
+- [`xmlim watch file PATH`](#xmlim-watch-file-path)
+- [`xmlim watch dir PATH`](#xmlim-watch-dir-path)
 - [`xmlim help [COMMANDS]`](#xmlim-help-commands)
 
 ## `xmlim gen PATH`
