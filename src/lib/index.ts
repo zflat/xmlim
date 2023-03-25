@@ -9,13 +9,15 @@ import { chartFromXml } from "./convert";
 import { format as nomnomlFormat } from "./chartFormat/nomnoml-format";
 import { format as mermaidFormat } from "./chartFormat/mermaid-format";
 
-export const watchFlags = Flags.string({
-  options: ["svg"],
-  default: "svg",
-  multiple: false,
-  description: "Format of the output",
-  required: false,
-});
+export const watchFlags = {
+  format: Flags.string({
+    options: ["svg"],
+    default: "svg",
+    multiple: false,
+    description: "Format of the output",
+    required: false,
+  }),
+};
 
 export async function genSingleFile(
   xmlFilePath: string,

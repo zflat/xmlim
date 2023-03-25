@@ -7,10 +7,7 @@ import { genSingleFile } from "../../lib";
 export default class Gen extends Command {
   static description = "Generate a diagram from a specified XML document";
 
-  static examples = [
-    `$ xmlim gen data.xml
-`,
-  ];
+  static examples = ["<%= config.bin %> <%= command.id %> data.xml"];
 
   static flags = {
     format: Flags.string({
