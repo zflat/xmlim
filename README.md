@@ -31,7 +31,7 @@ USAGE
 <!-- commands -->
 
 - [`xmlim gen XML_FILE`](#xmlim-gen-xml_file)
-- [`xmlim watch PATH`](#xmlim-watch_path)
+- [`xmlim watch PATH`](#xmlim-watch-path)
 - [`xmlim help [COMMANDS]`](#xmlim-help-commands)
 
 ## `xmlim gen XML_FILE`
@@ -55,7 +55,7 @@ EXAMPLES
   $ oex gen example.xml --format svg
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/zflat/xmlim/blob/v0.0.0/dist/commands/gen/index.ts)_
+_See code: [dist/commands/gen/index.ts](https://github.com/zflat/xmlim/blob/v0.0.0/dist/commands/gen/index.ts)_
 
 ## `xmlim watch PATH -f <value>`
 
