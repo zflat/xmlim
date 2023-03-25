@@ -242,5 +242,3 @@ FLAGS
 DESCRIPTION
   Update installed plugins.
 ```
-
-
