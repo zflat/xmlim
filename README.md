@@ -1,6 +1,6 @@
 # xmlim
 
-xmlim CLI
+xmlim (pronounced ex-em-el-im) is a CLI for generating diagrams of XML documents. XML is hierarchical, so a tree diagram is well suited for representing the structure of an XML document.
 
 <!-- toc -->
 
@@ -117,6 +117,6 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.7
 
 ## Impementation notes
 
-- CLI created using [oclif](https://github.com/oclif/oclif)
+- CLI command processing and application scaffolded using [oclif](https://github.com/oclif/oclif)
 - XML parsing using https://github.com/rgrove/parse-xml
 - Diagram generation using https://www.nomnoml.com/
