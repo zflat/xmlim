@@ -58,13 +58,13 @@ EXAMPLES
 
 _See code: [dist/commands/gen/index.ts](https://github.com/zflat/xmlim/blob/v0.0.0/dist/commands/gen/index.ts)_
 
-## `xmlim watch file PATH -f <value>`
+## `xmlim watch file PATH`
 
 Watch a file for changes and generate updated diagrams
 
 ```
 USAGE
-  $ xmlim watch file PATH
+  $ xmlim watch file PATH -f <value>
 
 FLAGS
   -f, --format=<value>  (optional) Format of the output
@@ -76,13 +76,13 @@ EXAMPLES
   $ xmlim watch file ~/example.xml
 ```
 
-## `xmlim watch dir PATH -f <value>`
+## `xmlim watch dir PATH`
 
 Watch a directory or for changes to any XML file and generate updated diagrams
 
 ```
 USAGE
-  $ xmlim watch dir PATH
+  $ xmlim watch dir PATH -f <value>
 
 FLAGS
   -f, --format=<value>  (optional) Format of the output
