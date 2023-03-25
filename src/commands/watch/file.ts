@@ -1,3 +1,5 @@
+import * as fs from "node:fs";
+
 import { Args, Command, Flags } from "@oclif/core";
 
 import { watchFlags, genSingleFile } from "../../lib";
@@ -19,7 +21,20 @@ export default class WatchFile extends Command {
 
   public async run(): Promise<void> {
     const { args, flags } = await this.parse(WatchFile);
-
-    this.log("...");
+    fs.watchFile(
+      args.file,
+      {
+        bigint: false,
+        persistent: true,
+        interval: 2500,
+      },
+      async (curr, prev) => {
+        const xml = fs.readFileSync(args.file, "utf8");
+        const output = await genSingleFile(args.file, xml, flags.format);
+        if (output !== "") {
+          this.log(output);
+        }
+      }
+    );
   }
 }
