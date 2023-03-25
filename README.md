@@ -2,7 +2,16 @@
 
 xmlim (pronounced ex-em-el-im) is a CLI for generating diagrams of XML documents. XML is hierarchical, so a tree diagram is well suited for representing the structure of an XML document.
 
-## Example
+<!-- toc -->
+
+- [Example](#example-diagram)
+- [Usage](#usage)
+- [Commands](#commands)
+- [Implementation Nodes](#implemention-notes)
+<!-- tocstop -->
+
+
+## Example Diagram
 
 Given the following XML:
 
@@ -18,13 +27,6 @@ Given the following XML:
 This diagram is generated:
 
 ![example_diagram](test/examples/example1.svg)
-
-<!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
-- [Implementation Nodes](#implemention-notes)
-<!-- tocstop -->
 
 # Usage
 
