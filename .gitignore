@@ -10,4 +10,4 @@ node_modules
 oclif.manifest.json
 
 # test output
-test/examples/example1.svg
+test/examples/*.svg

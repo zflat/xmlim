@@ -1,0 +1,72 @@
+<svg version="1.1" baseProfile="full" width="332.0" height="244.0" viewbox="0 0 332 244" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<desc >[A (0, 0)]
+	[B (0, 1);name=1]
+	[B (1, 1);name=first...worst]
+	[C (0, 2)]
+	[A (0, 0)]-&gt;[B (0, 1)]
+	[A (0, 0)]-&gt;[B (1, 1)]
+	[B (0, 1)]-&gt;[C (0, 2)]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
+		<g transform="translate(0.5, 0.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="244.0" width="332.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(8, 8)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+					<path d="M84.5 31.0 L40 51 L40 64.33333333333333 L40.0 64.3 " fill="none"></path>
+					<path d="M34.7 57.7 L40.0 64.3 L45.3 57.7 L40.0 71.0 Z"></path>
+					<path d="M153.5 31.0 L198 51 L198 64.33333333333333 L198.0 64.3 " fill="none"></path>
+					<path d="M192.7 57.7 L198.0 64.3 L203.3 57.7 L198.0 71.0 Z"></path>
+					<path d="M40.0 117.0 L40 137 L40 150.33333333333334 L40.0 150.3 " fill="none"></path>
+					<path d="M34.7 143.7 L40.0 150.3 L45.3 143.7 L40.0 157.0 Z"></path>
+					<g data-name="A (0, 0)">
+						<g fill="#eee8d5" stroke="#33322E" data-name="A (0, 0)">
+							<rect x="82.0" y="0.0" height="31.0" width="74.0" data-name="A (0, 0)"></rect>
+						</g>
+						<g transform="translate(82, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="A (0, 0)">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="A (0, 0)">
+								<text x="29.0" y="13.5" stroke="none" text-anchor="middle" data-name="A (0, 0)">A (0, 0)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="B (0, 1)">
+						<g fill="#eee8d5" stroke="#33322E" data-name="B (0, 1)">
+							<rect x="0.0" y="71.0" height="46.0" width="80.0" data-name="B (0, 1)"></rect>
+						</g>
+						<g transform="translate(0, 71)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="B (0, 1)">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="B (0, 1)">
+								<text x="32.0" y="13.5" stroke="none" text-anchor="middle" data-name="B (0, 1)">B (0, 1)</text>
+								<text x="32.0" y="28.5" stroke="none" text-anchor="middle" data-name="B (0, 1)">name=1</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="B (1, 1)">
+						<g fill="#eee8d5" stroke="#33322E" data-name="B (1, 1)">
+							<rect x="120.0" y="71.0" height="46.0" width="156.0" data-name="B (1, 1)"></rect>
+						</g>
+						<g transform="translate(120, 71)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="B (1, 1)">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="B (1, 1)">
+								<text x="70.0" y="13.5" stroke="none" text-anchor="middle" data-name="B (1, 1)">B (1, 1)</text>
+								<text x="70.0" y="28.5" stroke="none" text-anchor="middle" data-name="B (1, 1)">name=first...worst</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="C (0, 2)">
+						<g fill="#eee8d5" stroke="#33322E" data-name="C (0, 2)">
+							<rect x="3.0" y="157.0" height="31.0" width="75.0" data-name="C (0, 2)"></rect>
+						</g>
+						<g transform="translate(3, 157)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="C (0, 2)">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="C (0, 2)">
+								<text x="29.5" y="13.5" stroke="none" text-anchor="middle" data-name="C (0, 2)">C (0, 2)</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
