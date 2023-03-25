@@ -30,20 +30,20 @@ USAGE
 
 <!-- commands -->
 
-- [`xmlim gen XML_FILE`](#xmlim-gen-xml_file)
+- [`xmlim gen PATH`](#xmlim-gen-path)
 - [`xmlim watch PATH`](#xmlim-watch-path)
 - [`xmlim help [COMMANDS]`](#xmlim-help-commands)
 
-## `xmlim gen XML_FILE`
+## `xmlim gen PATH`
 
 Generate a diagram from the given XML file
 
 ```
 USAGE
-  $ xmlim gen XML_FILE -f <value>
+  $ xmlim gen PATH -f <value>
 
 ARGUMENTS
-  XML_FILE  File path to an XML document
+  PATH  File path to an XML document
 
 FLAGS
   -f, --format=<value>  (optional) Format of the output to generate
@@ -52,27 +52,45 @@ DESCRIPTION
   Generate diagram
 
 EXAMPLES
-  $ oex gen example.xml --format svg
+  $ xmlim gen example.xml --format svg
 ```
 
 _See code: [dist/commands/gen/index.ts](https://github.com/zflat/xmlim/blob/v0.0.0/dist/commands/gen/index.ts)_
 
-## `xmlim watch PATH -f <value>`
+## `xmlim watch file PATH -f <value>`
 
-Watch a directory or file for changes and generate updated diagrams
+Watch a file for changes and generate updated diagrams
 
 ```
 USAGE
-  $ xmlim watch PATH
+  $ xmlim watch file PATH
 
 FLAGS
   -f, --format=<value>  (optional) Format of the output
 
 DESCRIPTION
-  Watch PATH file or directory for changes and re-generate diagrams from XML files found
+  Watch PATH file for changes and re-generate diagrams from XML files found
 
 EXAMPLES
-  $ xmlim watch ~/example_files/
+  $ xmlim watch file ~/example.xml
+```
+
+## `xmlim watch dir PATH -f <value>`
+
+Watch a directory or for changes to any XML file and generate updated diagrams
+
+```
+USAGE
+  $ xmlim watch dir PATH
+
+FLAGS
+  -f, --format=<value>  (optional) Format of the output
+
+DESCRIPTION
+  Find all XML files in PATH directory and watch them for changes. Re-generate diagrams for the XML files that change.
+
+EXAMPLES
+  $ xmlim watch dir ~/example_files/
 ```
 
 ## `xmlim help [COMMANDS]`
