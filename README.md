@@ -88,7 +88,8 @@ FLAGS
   -f, --format=<value>  (optional) Format of the output
 
 DESCRIPTION
-  Find all XML files in PATH directory and watch them for changes. Re-generate diagrams for the XML files that change.
+  Find all XML files in PATH directory and watch them for changes.
+  Re-generate diagrams for the XML files that change.
 
 EXAMPLES
   $ xmlim watch dir ~/example_files/
