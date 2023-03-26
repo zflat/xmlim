@@ -1,6 +1,6 @@
 import * as fs from "node:fs";
 
-import { Args, Command, Flags, ux } from "@oclif/core";
+import { Args, Command, ux } from "@oclif/core";
 
 import { watchFlags, genSingleFile } from "../../lib";
 
