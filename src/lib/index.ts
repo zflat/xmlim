@@ -11,7 +11,7 @@ import { format as mermaidFormat } from "./chartFormat/mermaid-format";
 
 export const watchFlags = {
   format: Flags.string({
-    options: ["svg"],
+    options: ["svg", "mermaid"],
     default: "svg",
     multiple: false,
     description: "Format of the output",
