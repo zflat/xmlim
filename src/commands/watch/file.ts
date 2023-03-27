@@ -1,5 +1,7 @@
 import * as fs from "node:fs";
 
+import { Stats } from "node:fs";
+
 import { Args, Command, ux } from "@oclif/core";
 
 import { watchFlags, genSingleFile } from "../../lib";
@@ -26,7 +28,18 @@ export default class WatchFile extends Command {
       return;
     }
 
-    ux.action.start(`Watching ${args.file}`);
+    const watchHandler = async (_curr: Stats, _prev: Stats) => {
+      const xml = fs.readFileSync(args.file, "utf8");
+      const output = await genSingleFile(args.file, xml, flags.format);
+      if (output !== "") {
+        this.log(output);
+      }
+
+      if (flags.format !== "mermaid") {
+        ux.action.start(`Processed ${args.file} at ${new Date()}`);
+      }
+    };
+
     fs.watchFile(
       args.file,
       {
@@ -34,13 +47,13 @@ export default class WatchFile extends Command {
         persistent: true,
         interval: 2500,
       },
-      async (_curr, _prev) => {
-        const xml = fs.readFileSync(args.file, "utf8");
-        const output = await genSingleFile(args.file, xml, flags.format);
-        if (output !== "") {
-          this.log(output);
-        }
-      }
+      watchHandler
     );
+
+    watchHandler(new Stats(), new Stats());
+
+    if (flags.format !== "mermaid") {
+      ux.action.start(`Watching ${args.file}`);
+    }
   }
 }

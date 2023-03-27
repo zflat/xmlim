@@ -52,14 +52,6 @@ export default class WatchDir extends Command {
       })
     );
 
-    for (const file of files) {
-      watchHandler("change", file);
-    }
-
-    if (flags.format !== "mermaid") {
-      ux.action.start(`Watching ${args.dir}`);
-    }
-
     fs.watch(
       args.dir,
       {
@@ -68,5 +60,13 @@ export default class WatchDir extends Command {
       },
       watchHandler
     );
+
+    for (const file of files) {
+      watchHandler("change", file);
+    }
+
+    if (flags.format !== "mermaid") {
+      ux.action.start(`Watching ${args.dir}`);
+    }
   }
 }
