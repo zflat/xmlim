@@ -11,7 +11,7 @@ export type NodeCoordinate = {
 
 export interface ChartFormat {
   chartHeader(): string;
-  nodeDecl(coord: NodeCoordinate, node: XmlElement): string;
+  nodeDecl(coord: NodeCoordinate, node: XmlElement, isLast: boolean): string;
   nodeConnection(
     coordFrom: NodeCoordinate,
     nodeFrom: XmlElement,
