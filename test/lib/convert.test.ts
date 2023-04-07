@@ -45,18 +45,16 @@ describe("convert:chartCase1FromXml", () => {
   });
 });
 
-// const xmlCase2NotValid = `
-// <A>
-//   <B name="1">
-// </A>
-// `
-// describe("convert:chartCase2NotValidFromXml", () => {
-//   test.it("returns empty as nomnoml", (_ctx) => {
-//     expect(chartFromXml(xmlCase2NotValid, nomnomlFormat)).to.equal(
-//       ''
-//     );
-//   });
-// });
+const xmlCase2NotValid = `
+ <A>
+   <B name="1">
+ </A>
+`;
+describe("convert:chartCase2NotValidFromXml", () => {
+  test.it("throws parse error", (_ctx) => {
+    expect(() => chartFromXml(xmlCase2NotValid, nomnomlFormat)).to.throw();
+  });
+});
 
 const xmlCase3AttributeEntities = `
 <A>
