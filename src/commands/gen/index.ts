@@ -29,8 +29,14 @@ export default class Gen extends Command {
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Gen);
     const xml = fs.readFileSync(args.file, "utf8");
-    ux.action.start("Saving diagram to file");
+    if (flags.format === "svg") {
+      ux.action.start("Saving diagram to file");
+    }
+
     console.log(await genSingleFile(args.file, xml, flags.format));
-    ux.action.stop();
+
+    if (flags.format === "svg") {
+      ux.action.stop();
+    }
   }
 }

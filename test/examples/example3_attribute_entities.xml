@@ -1,0 +1,8 @@
+<!-- Some characters affect the diagram generation syntax and should
+     be handled based on the selected output formatter -->
+<A>
+  <B name="->1">
+    <C />
+  </B>
+  <B name="]a:b["/>
+</A>
