@@ -47,12 +47,30 @@ const levelOrderTraverseQ = function (
   return output;
 };
 
-export function chartFromXml(xml: string, formatter: ChartFormat): string {
-  // See https://github.com/FullStackPlayer/ts-xml-parser for parser usage
-  const doc = parseXml(xml).document;
+export function chartFromXml(
+  xml: string,
+  formatter: ChartFormat
+): [string, boolean] {
+  let doc: XmlDocument | undefined;
+  try {
+    doc = parseXml(xml).document;
+  } catch (error) {
+    let message: string;
+
+    if (typeof error === "string") {
+      message = error;
+    } else if (error instanceof Error) {
+      message = error.message;
+    } else {
+      message = "Error parsing XML";
+    }
+
+    const chart = formatter.errorChart(message);
+    return [chart, false];
+  }
 
   if (doc === undefined) {
-    return "";
+    return ["", false];
   }
 
   const levels = levelOrderTraverseQ(doc);
@@ -92,5 +110,5 @@ export function chartFromXml(xml: string, formatter: ChartFormat): string {
     levelCount++;
   }
 
-  return chart.trim();
+  return [chart.trim(), true];
 }

@@ -1,6 +1,6 @@
 import * as fs from "node:fs";
 
-import { Args, Command, Flags, ux } from "@oclif/core";
+import { Args, Command, Flags } from "@oclif/core";
 
 import { genSingleFile } from "../../lib";
 
@@ -29,14 +29,19 @@ export default class Gen extends Command {
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Gen);
     const xml = fs.readFileSync(args.file, "utf8");
-    if (flags.format === "svg") {
-      ux.action.start("Saving diagram to file");
+
+    const [output, success] = await genSingleFile(args.file, xml, flags.format);
+
+    if (output !== "") {
+      this.log(output);
+    } else if (success === false) {
+      this.logToStderr(`Error parsing ${args.file} at ${new Date()}`);
+    } else {
+      this.log("Saved diagram to file");
     }
 
-    console.log(await genSingleFile(args.file, xml, flags.format));
-
-    if (flags.format === "svg") {
-      ux.action.stop();
+    if (success === false) {
+      this.exit(1);
     }
   }
 }

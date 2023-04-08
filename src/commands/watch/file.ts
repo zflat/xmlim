@@ -30,9 +30,15 @@ export default class WatchFile extends Command {
 
     const watchHandler = async (_curr: Stats, _prev: Stats) => {
       const xml = fs.readFileSync(args.file, "utf8");
-      const output = await genSingleFile(args.file, xml, flags.format);
+      const [output, success] = await genSingleFile(
+        args.file,
+        xml,
+        flags.format
+      );
       if (output !== "") {
         this.log(output);
+      } else if (success === false) {
+        this.error(`Error parsing ${args.file} at ${new Date()}`);
       }
 
       if (flags.format !== "mermaid") {

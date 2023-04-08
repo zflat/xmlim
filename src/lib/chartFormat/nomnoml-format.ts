@@ -46,4 +46,8 @@ export const format: ChartFormat = {
     const idTo = id(coordTo, nodeTo);
     return `\n[${idFrom}]->[${idTo}]`;
   },
+
+  errorChart(error: string): string {
+    return `Error:\n${escapeControlChars(error)}`;
+  },
 };

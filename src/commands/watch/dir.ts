@@ -35,9 +35,15 @@ export default class WatchDir extends Command {
 
       const filePath = path.join(args.dir, file);
       const xml = fs.readFileSync(filePath, "utf8");
-      const output = await genSingleFile(filePath, xml, flags.format);
+      const [output, success] = await genSingleFile(
+        filePath,
+        xml,
+        flags.format
+      );
       if (output !== "") {
         this.log(output);
+      } else if (success === false) {
+        this.error(`Error parsing ${file} at ${new Date()}`);
       }
 
       if (flags.format !== "mermaid") {

@@ -18,4 +18,5 @@ export interface ChartFormat {
     coordTo: NodeCoordinate,
     nodeTo: XmlElement
   ): string;
+  errorChart(error: string): string;
 }

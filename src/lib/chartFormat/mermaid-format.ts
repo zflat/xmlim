@@ -42,4 +42,12 @@ export const format: ChartFormat = {
   ): string {
     return `\n    ${id(coordFrom, nodeFrom)}-->${id(coordTo, nodeTo)}`;
   },
+
+  errorChart(error: string): string {
+    const msg = error
+      .split("\n")
+      .map((s) => toHtmlEntities(s))
+      .join("\\n");
+    return `flowchart\n    A[Error:\\n${msg}]`;
+  },
 };
