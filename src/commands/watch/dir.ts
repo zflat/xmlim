@@ -43,10 +43,8 @@ export default class WatchDir extends Command {
       if (output !== "") {
         this.log(output);
       } else if (success === false) {
-        this.error(`Error parsing ${file} at ${new Date()}`);
-      }
-
-      if (flags.format !== "mermaid") {
+        this.logToStderr(`Error parsing ${file} at ${new Date()}`);
+      } else {
         ux.action.start(`Processed ${file} at ${new Date()}`);
       }
     };

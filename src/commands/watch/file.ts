@@ -38,10 +38,8 @@ export default class WatchFile extends Command {
       if (output !== "") {
         this.log(output);
       } else if (success === false) {
-        this.error(`Error parsing ${args.file} at ${new Date()}`);
-      }
-
-      if (flags.format !== "mermaid") {
+        this.logToStderr(`Error parsing ${args.file} at ${new Date()}`);
+      } else {
         ux.action.start(`Processed ${args.file} at ${new Date()}`);
       }
     };
