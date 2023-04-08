@@ -52,7 +52,7 @@ const xmlCase2NotValid = `
 `;
 describe("convert:chartCase2NotValidFromXml", () => {
   test.it("throws parse error", (_ctx) => {
-    expect(() => chartFromXml(xmlCase2NotValid, nomnomlFormat)[0]).to.throw();
+    expect(chartFromXml(xmlCase2NotValid, nomnomlFormat)[1]).to.equal(false);
   });
 });
 
