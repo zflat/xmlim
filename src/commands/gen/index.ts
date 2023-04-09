@@ -30,12 +30,16 @@ export default class Gen extends Command {
     const { args, flags } = await this.parse(Gen);
     const xml = fs.readFileSync(args.file, "utf8");
 
-    const [output, success] = await genSingleFile(args.file, xml, flags.format);
+    const { output, success, error } = await genSingleFile(
+      args.file,
+      xml,
+      flags.format
+    );
 
     if (output !== "") {
       this.log(output);
     } else if (success === false) {
-      this.logToStderr(`Error parsing ${args.file} at ${new Date()}`);
+      this.logToStderr(`Error parsing ${args.file} at ${new Date()}\n${error}`);
     } else {
       this.log("Saved diagram to file");
     }

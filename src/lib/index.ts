@@ -23,9 +23,13 @@ export async function genSingleFile(
   xmlFilePath: string,
   xml: string,
   format: string
-): Promise<[string, boolean]> {
+): Promise<{
+  output: string;
+  success: boolean;
+  error: string;
+}> {
   if (format === "svg") {
-    const [chart, success] = chartFromXml(xml, nomnomlFormat);
+    const { chart, success, error } = chartFromXml(xml, nomnomlFormat);
     const svg = nomnoml.renderSvg(chart);
     const outputPath = `${path.dirname(xmlFilePath)}/${path
       .basename(xmlFilePath)
@@ -37,12 +41,25 @@ export async function genSingleFile(
         throw err;
       }
     });
-    return ["", success];
+    return {
+      output: "",
+      success,
+      error,
+    };
   }
 
   if (format === "mermaid") {
-    return chartFromXml(xml, mermaidFormat);
+    const { chart: output, success, error } = chartFromXml(xml, mermaidFormat);
+    return {
+      output,
+      success,
+      error,
+    };
   }
 
-  return ["", false];
+  return {
+    output: "",
+    success: false,
+    error: "",
+  };
 }

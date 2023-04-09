@@ -35,17 +35,24 @@ export default class WatchDir extends Command {
 
       const filePath = path.join(args.dir, file);
       const xml = fs.readFileSync(filePath, "utf8");
-      const [output, success] = await genSingleFile(
+      const { output, success, error } = await genSingleFile(
         filePath,
         xml,
         flags.format
       );
-      if (output !== "") {
-        this.log(output);
-      } else if (success === false) {
-        this.logToStderr(`Error parsing ${file} at ${new Date()}`);
+
+      if (success === false) {
+        this.logToStderr(`Error parsing ${file} at ${new Date()}\n${error}`);
+      }
+
+      if (output === "") {
+        ux.action.start(
+          `Last processed ${file} at ${new Date()}\nWatching ${
+            args.dir
+          } directory`
+        );
       } else {
-        ux.action.start(`Processed ${file} at ${new Date()}`);
+        this.log(output);
       }
     };
 
@@ -70,7 +77,7 @@ export default class WatchDir extends Command {
     }
 
     if (flags.format !== "mermaid") {
-      ux.action.start(`Watching ${args.dir}`);
+      ux.action.start(`Watching ${args.dir} directory`);
     }
   }
 }

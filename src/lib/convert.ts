@@ -50,7 +50,11 @@ const levelOrderTraverseQ = function (
 export function chartFromXml(
   xml: string,
   formatter: ChartFormat
-): [string, boolean] {
+): {
+  chart: string;
+  success: boolean;
+  error: string;
+} {
   let doc: XmlDocument | undefined;
   try {
     doc = parseXml(xml).document;
@@ -66,11 +70,19 @@ export function chartFromXml(
     }
 
     const chart = formatter.errorChart(message);
-    return [chart, false];
+    return {
+      chart: chart,
+      success: false,
+      error: message,
+    };
   }
 
   if (doc === undefined) {
-    return ["", false];
+    return {
+      chart: "",
+      success: false,
+      error: "",
+    };
   }
 
   const levels = levelOrderTraverseQ(doc);
@@ -110,5 +122,9 @@ export function chartFromXml(
     levelCount++;
   }
 
-  return [chart.trim(), true];
+  return {
+    chart: chart.trim(),
+    success: true,
+    error: "",
+  };
 }

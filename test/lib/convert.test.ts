@@ -34,12 +34,12 @@ const chartCase1nommol = `
 
 describe("convert:chartCase1FromXml", () => {
   test.it("formats as mermaid", (_ctx) => {
-    expect(chartFromXml(xmlCase1, mermaidFormat)[0]).to.equal(
+    expect(chartFromXml(xmlCase1, mermaidFormat).chart).to.equal(
       chartCase1mmd.trim()
     );
   });
   test.it("formats as nomnoml", (_ctx) => {
-    expect(chartFromXml(xmlCase1, nomnomlFormat)[0]).to.equal(
+    expect(chartFromXml(xmlCase1, nomnomlFormat).chart).to.equal(
       chartCase1nommol.trim()
     );
   });
@@ -52,7 +52,9 @@ const xmlCase2NotValid = `
 `;
 describe("convert:chartCase2NotValidFromXml", () => {
   test.it("throws parse error", (_ctx) => {
-    expect(chartFromXml(xmlCase2NotValid, nomnomlFormat)[1]).to.equal(false);
+    expect(chartFromXml(xmlCase2NotValid, nomnomlFormat).success).to.equal(
+      false
+    );
   });
 });
 
@@ -86,13 +88,13 @@ const chartCase3nommol = `
 
 describe("convert:chartCase3AttributesEntities", () => {
   test.it("formats as mermaid", (_ctx) => {
-    expect(chartFromXml(xmlCase3AttributeEntities, mermaidFormat)[0]).to.equal(
-      chartCase3mmd.trim()
-    );
+    expect(
+      chartFromXml(xmlCase3AttributeEntities, mermaidFormat).chart
+    ).to.equal(chartCase3mmd.trim());
   });
   test.it("formats as nomnoml", (_ctx) => {
-    expect(chartFromXml(xmlCase3AttributeEntities, nomnomlFormat)[0]).to.equal(
-      chartCase3nommol.trim()
-    );
+    expect(
+      chartFromXml(xmlCase3AttributeEntities, nomnomlFormat).chart
+    ).to.equal(chartCase3nommol.trim());
   });
 });
