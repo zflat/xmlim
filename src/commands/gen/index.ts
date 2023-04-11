@@ -5,7 +5,7 @@ import { Args, Command, Flags } from "@oclif/core";
 import { genSingleFile } from "../../lib";
 
 export default class Gen extends Command {
-  static description = "Generate a diagram from a specified XML document";
+  static description = "Generate a diagram of a specified XML document";
 
   static examples = ["<%= config.bin %> <%= command.id %> data.xml"];
 
