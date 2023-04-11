@@ -1,14 +1,17 @@
-# Plugins
+`xmlim plugins`
+===============
 
-- [`xmlim plugins`](#xmlim-plugins)
-- [`xmlim plugins:install PLUGIN...`](#xmlim-pluginsinstall-plugin)
-- [`xmlim plugins:inspect PLUGIN...`](#xmlim-pluginsinspect-plugin)
-- [`xmlim plugins:install PLUGIN...`](#xmlim-pluginsinstall-plugin-1)
-- [`xmlim plugins:link PLUGIN`](#xmlim-pluginslink-plugin)
-- [`xmlim plugins:uninstall PLUGIN...`](#xmlim-pluginsuninstall-plugin)
-- [`xmlim plugins:uninstall PLUGIN...`](#xmlim-pluginsuninstall-plugin-1)
-- [`xmlim plugins:uninstall PLUGIN...`](#xmlim-pluginsuninstall-plugin-2)
-- [`xmlim plugins update`](#xmlim-plugins-update)
+List installed plugins.
+
+* [`xmlim plugins`](#xmlim-plugins)
+* [`xmlim plugins:install PLUGIN...`](#xmlim-pluginsinstall-plugin)
+* [`xmlim plugins:inspect PLUGIN...`](#xmlim-pluginsinspect-plugin)
+* [`xmlim plugins:install PLUGIN...`](#xmlim-pluginsinstall-plugin-1)
+* [`xmlim plugins:link PLUGIN`](#xmlim-pluginslink-plugin)
+* [`xmlim plugins:uninstall PLUGIN...`](#xmlim-pluginsuninstall-plugin)
+* [`xmlim plugins:uninstall PLUGIN...`](#xmlim-pluginsuninstall-plugin-1)
+* [`xmlim plugins:uninstall PLUGIN...`](#xmlim-pluginsuninstall-plugin-2)
+* [`xmlim plugins update`](#xmlim-plugins-update)
 
 ## `xmlim plugins`
 
@@ -28,7 +31,7 @@ EXAMPLES
   $ xmlim plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.0/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.3/src/commands/plugins/index.ts)_
 
 ## `xmlim plugins:install PLUGIN...`
 
@@ -61,7 +64,7 @@ ALIASES
   $ xmlim plugins add
 
 EXAMPLES
-  $ xmlim plugins:install myplugin
+  $ xmlim plugins:install myplugin 
 
   $ xmlim plugins:install https://github.com/someuser/someplugin
 
@@ -124,7 +127,7 @@ ALIASES
   $ xmlim plugins add
 
 EXAMPLES
-  $ xmlim plugins:install myplugin
+  $ xmlim plugins:install myplugin 
 
   $ xmlim plugins:install https://github.com/someuser/someplugin
 

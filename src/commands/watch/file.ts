@@ -8,7 +8,7 @@ import { watchFlags, genSingleFile } from "../../lib";
 
 export default class WatchFile extends Command {
   static description =
-    "Watches the XML document and genertes a new diagram when the file changes";
+    "Watch FILE for changes and re-generate diagrams from XML files found";
 
   static examples = ["<%= config.bin %> <%= command.id %> data.xml"];
 

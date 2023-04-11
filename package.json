@@ -51,8 +51,17 @@
     ],
     "topicSeparator": " ",
     "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
+      "gen": {
+        "description": "Generate a diagram from the given XML file"
+      },
+      "watch": {
+        "description": "Watch a file or directory for changes and re-generate a new diagram"
+      },
+      "watch file": {
+        "description": "Watch the XML document and generates a new diagram when the file changes"
+      },
+      "watch dir": {
+        "description": "Watch all *.xml documents in the directory and generate a new diagram when a file changes"
       }
     }
   },
