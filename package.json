@@ -51,9 +51,6 @@
     ],
     "topicSeparator": " ",
     "topics": {
-      "gen": {
-        "description": "Generate a diagram from the given XML file"
-      },
       "watch": {
         "description": "Watch a file or directory for changes and re-generate a new diagram"
       },

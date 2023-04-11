@@ -46,7 +46,7 @@ USAGE
 <!-- commands -->
 # Command Topics
 
-* [`xmlim gen`](docs/gen.md) - Generate a diagram from the given XML file
+* [`xmlim gen`](docs/gen.md) - Generate a diagram of a specified XML document
 * [`xmlim help`](docs/help.md) - Display help for xmlim.
 * [`xmlim plugins`](docs/plugins.md) - List installed plugins.
 * [`xmlim watch`](docs/watch.md) - Watch a file or directory for changes and re-generate a new diagram

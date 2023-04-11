@@ -1,13 +1,13 @@
 `xmlim gen`
 ===========
 
-Generate a diagram from the given XML file
+Generate a diagram of a specified XML document
 
 * [`xmlim gen FILE`](#xmlim-gen-file)
 
 ## `xmlim gen FILE`
 
-Generate a diagram from a specified XML document
+Generate a diagram of a specified XML document
 
 ```
 USAGE
@@ -21,7 +21,7 @@ FLAGS
                      <options: mermaid|svg>
 
 DESCRIPTION
-  Generate a diagram from a specified XML document
+  Generate a diagram of a specified XML document
 
 EXAMPLES
   $ xmlim gen data.xml
