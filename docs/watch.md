@@ -1,7 +1,7 @@
 `xmlim watch`
 =============
 
-Watches all *.xml documents in the directory and generates a new diagram when a file changes
+Watch a file or directory for changes and re-generate a new diagram
 
 * [`xmlim watch dir DIR`](#xmlim-watch-dir-dir)
 * [`xmlim watch file FILE`](#xmlim-watch-file-file)
