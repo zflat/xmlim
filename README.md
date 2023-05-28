@@ -53,7 +53,7 @@ USAGE
 
 <!-- commandsstop -->
 
-# Implementation notes
+# Credits
 
 - CLI command processing and application scaffolded using [oclif](https://github.com/oclif/oclif)
 - XML parsing using https://github.com/rgrove/parse-xml
