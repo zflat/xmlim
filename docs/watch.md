@@ -8,7 +8,7 @@ Watch a file or directory for changes and re-generate a new diagram
 
 ## `xmlim watch dir DIR`
 
-Watches all *.xml documents in the directory and generates a new diagram when a file changes
+Find all XML files in DIR and watch them for changes.
 
 ```
 USAGE
@@ -22,15 +22,16 @@ FLAGS
                      <options: svg|mermaid>
 
 DESCRIPTION
-  Watches all *.xml documents in the directory and generates a new diagram when a file changes
+  Find all XML files in DIR and watch them for changes.
+  Re-generate diagrams for the XML files that change.
 
 EXAMPLES
-  $ xmlim watch dir data.xml
+  $ xmlim watch dir ./example_files/
 ```
 
 ## `xmlim watch file FILE`
 
-Watches the XML document and generates a new diagram when the file changes
+Watch FILE for changes and re-generate diagrams from XML files found
 
 ```
 USAGE
@@ -44,7 +45,7 @@ FLAGS
                      <options: svg|mermaid>
 
 DESCRIPTION
-  Watches the XML document and generates a new diagram when the file changes
+  Watch FILE for changes and re-generate diagrams from XML files found
 
 EXAMPLES
   $ xmlim watch file data.xml
