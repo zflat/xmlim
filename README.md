@@ -5,7 +5,7 @@ xmlim (pronounced ex-em-el-im) is a CLI for generating diagrams of XML documents
 * [Usage](#usage)
 * [Commands](#commands)
 * [Command Topics](#command-topics)
-* [Implementation notes](#implementation-notes)
+* [Credits](#credits)
 <!-- tocstop -->
 
 # Example Diagram
@@ -42,6 +42,8 @@ USAGE
 <!-- usagestop -->
 
 # Commands
+
+The xmlim CLI contains top level commands for basic usage and nested commands grouped by topic for additional functionality. The main command is [`xmlim gen`](docs/gen.md) and additional functionality is nested under the [`xmlim watch`](docs/watch.md) command.
 
 <!-- commands -->
 # Command Topics
