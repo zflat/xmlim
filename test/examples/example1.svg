@@ -1,66 +1,66 @@
 <svg version="1.1" baseProfile="full" width="420.0" height="244.0" viewbox="0 0 420 244" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-	<desc >[A (0, 0)]
-	[B (0, 1);name=1]
-	[B (1, 1);name=first_seco...hird_worst]
-	[C (0, 2)]
-	[A (0, 0)]-&gt;[B (0, 1)]
-	[A (0, 0)]-&gt;[B (1, 1)]
-	[B (0, 1)]-&gt;[C (0, 2)]</desc>
+	<desc >[&lt;state id=0_0&gt;A]
+	[&lt;state id=0_1&gt;B;name=1]
+	[&lt;state id=1_1&gt;B;name=first_seco...hird_worst]
+	[&lt;state id=0_2&gt;C]
+	[0_0]-&gt;[0_1]
+	[0_0]-&gt;[1_1]
+	[0_1]-&gt;[0_2]</desc>
 	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="bold" font-style="normal">
-		<g transform="translate(0.5, 0.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+		<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 			<g stroke="transparent" fill="transparent">
 				<rect x="0.0" y="0.0" height="244.0" width="420.0" stroke="none"></rect>
 			</g>
 			<g transform="translate(8, 8)" fill="#33322E">
 				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
-					<path d="M104.0 28.5 L40 51 L40 64.33333333333333 L40.0 64.3 " fill="none"></path>
+					<path d="M127.5 20.2 L40 51 L40 64.33333333333333 L40.0 64.3 " fill="none"></path>
 					<path d="M34.7 57.7 L40.0 64.3 L45.3 57.7 L40.0 71.0 Z"></path>
-					<path d="M178.0 28.5 L242 51 L242 64.33333333333333 L242.0 64.3 " fill="none"></path>
+					<path d="M154.5 20.2 L242 51 L242 64.33333333333333 L242.0 64.3 " fill="none"></path>
 					<path d="M236.7 57.7 L242.0 64.3 L247.3 57.7 L242.0 71.0 Z"></path>
 					<path d="M40.0 117.0 L40 137 L40 150.33333333333334 L40.0 150.3 " fill="none"></path>
 					<path d="M34.7 143.7 L40.0 150.3 L45.3 143.7 L40.0 157.0 Z"></path>
-					<g data-name="A (0, 0)">
-						<g fill="#eee8d5" stroke="#33322E" data-name="A (0, 0)">
-							<rect x="104.0" y="0.0" height="31.0" width="74.0" data-name="A (0, 0)"></rect>
+					<g data-name="0_0">
+						<g fill="#eee8d5" stroke="#33322E" data-name="0_0">
+							<rect x="127.5" y="0.0" rx="15.5" ry="15.5" height="31.0" width="27.0" data-name="0_0"></rect>
 						</g>
-						<g transform="translate(104, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="A (0, 0)">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="A (0, 0)">
-								<text x="29.0" y="13.5" stroke="none" text-anchor="middle" data-name="A (0, 0)">A (0, 0)</text>
+						<g transform="translate(127.5, 0)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="0_0">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="0_0">
+								<text x="5.5" y="13.5" stroke="none" text-anchor="middle" data-name="0_0">A</text>
 								
 							</g>
 						</g>
 					</g>
-					<g data-name="B (0, 1)">
-						<g fill="#eee8d5" stroke="#33322E" data-name="B (0, 1)">
-							<rect x="0.0" y="71.0" height="46.0" width="80.0" data-name="B (0, 1)"></rect>
+					<g data-name="0_1">
+						<g fill="#eee8d5" stroke="#33322E" data-name="0_1">
+							<rect x="0.0" y="71.0" rx="20.0" ry="20.0" height="46.0" width="80.0" data-name="0_1"></rect>
 						</g>
-						<g transform="translate(0, 71)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="B (0, 1)">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="B (0, 1)">
-								<text x="32.0" y="13.5" stroke="none" text-anchor="middle" data-name="B (0, 1)">B (0, 1)</text>
-								<text x="32.0" y="28.5" stroke="none" text-anchor="middle" data-name="B (0, 1)">name=1</text>
+						<g transform="translate(0, 71)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="0_1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="0_1">
+								<text x="32.0" y="13.5" stroke="none" text-anchor="middle" data-name="0_1">B</text>
+								<text x="32.0" y="28.5" stroke="none" text-anchor="middle" data-name="0_1">name=1</text>
 								
 							</g>
 						</g>
 					</g>
-					<g data-name="B (1, 1)">
-						<g fill="#eee8d5" stroke="#33322E" data-name="B (1, 1)">
-							<rect x="120.0" y="71.0" height="46.0" width="244.0" data-name="B (1, 1)"></rect>
+					<g data-name="1_1">
+						<g fill="#eee8d5" stroke="#33322E" data-name="1_1">
+							<rect x="120.0" y="71.0" rx="20.0" ry="20.0" height="46.0" width="244.0" data-name="1_1"></rect>
 						</g>
-						<g transform="translate(120, 71)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="B (1, 1)">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="B (1, 1)">
-								<text x="114.0" y="13.5" stroke="none" text-anchor="middle" data-name="B (1, 1)">B (1, 1)</text>
-								<text x="114.0" y="28.5" stroke="none" text-anchor="middle" data-name="B (1, 1)">name=first_seco...hird_worst</text>
+						<g transform="translate(120, 71)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="1_1">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="1_1">
+								<text x="114.0" y="13.5" stroke="none" text-anchor="middle" data-name="1_1">B</text>
+								<text x="114.0" y="28.5" stroke="none" text-anchor="middle" data-name="1_1">name=first_seco...hird_worst</text>
 								
 							</g>
 						</g>
 					</g>
-					<g data-name="C (0, 2)">
-						<g fill="#eee8d5" stroke="#33322E" data-name="C (0, 2)">
-							<rect x="3.0" y="157.0" height="31.0" width="75.0" data-name="C (0, 2)"></rect>
+					<g data-name="0_2">
+						<g fill="#eee8d5" stroke="#33322E" data-name="0_2">
+							<rect x="26.0" y="157.0" rx="15.5" ry="15.5" height="31.0" width="28.0" data-name="0_2"></rect>
 						</g>
-						<g transform="translate(3, 157)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="C (0, 2)">
-							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="C (0, 2)">
-								<text x="29.5" y="13.5" stroke="none" text-anchor="middle" data-name="C (0, 2)">C (0, 2)</text>
+						<g transform="translate(26, 157)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="0_2">
+							<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="0_2">
+								<text x="6.0" y="13.5" stroke="none" text-anchor="middle" data-name="0_2">C</text>
 								
 							</g>
 						</g>

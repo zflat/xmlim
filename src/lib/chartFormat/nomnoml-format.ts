@@ -3,7 +3,7 @@ import { XmlElement } from "@rgrove/parse-xml";
 import { ChartFormat, NodeCoordinate, formattedAttrVal } from "./";
 
 export function id(coord: NodeCoordinate, node: XmlElement): string {
-  return `${node.name} (${coord.position}, ${coord.level})`;
+  return `${coord.position}_${coord.level}`;
 }
 
 export function isControlChar(c: string): boolean {
@@ -33,7 +33,7 @@ export const format: ChartFormat = {
       }
     }
 
-    return `\n[${id(coord, node)}${attribs}]`;
+    return `\n[<state id=${id(coord, node)}>${node.name}${attribs}]`;
   },
 
   nodeConnection(

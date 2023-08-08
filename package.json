@@ -21,7 +21,7 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.4.0",
     "@rgrove/parse-xml": "^4.1.0",
-    "nomnoml": "^1.5.3"
+    "nomnoml": "^1.6.2"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.10",

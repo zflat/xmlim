@@ -15,7 +15,7 @@ specifiers:
   eslint-config-oclif-typescript: ^1.0.3
   eslint-config-prettier: ^8.7.0
   mocha: ^9
-  nomnoml: ^1.5.3
+  nomnoml: ^1.6.2
   oclif: ^3
   prettier: ^2.8.4
   shx: ^0.3.3
@@ -28,7 +28,7 @@ dependencies:
   '@oclif/plugin-help': 5.2.8_65w256gcgmxfcz3fxhbqinpra4
   '@oclif/plugin-plugins': 2.4.3_65w256gcgmxfcz3fxhbqinpra4
   '@rgrove/parse-xml': 4.1.0
-  nomnoml: 1.5.3
+  nomnoml: 1.6.2
 
 devDependencies:
   '@oclif/test': 2.3.11_65w256gcgmxfcz3fxhbqinpra4
@@ -3579,8 +3579,8 @@ packages:
     resolution: {integrity: sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==}
     dev: true
 
-  /nomnoml/1.5.3:
-    resolution: {integrity: sha512-2LBKi3ygeYAC9l/wowgtBRxvQGuTryIczULVk2rFbWGUvs5aX68/sH+WgL95CschnSnxucTIv9L+3xScS71obQ==}
+  /nomnoml/1.6.2:
+    resolution: {integrity: sha512-R3dA3FS8txilobpd2ZdnCuEwmXYYljxza2wR41YE/cIHMbt0eXsjlXHlAsD+F/fVe536f0WkAQ+VQFRC3hPZCA==}
     hasBin: true
     dependencies:
       graphre: 0.1.3

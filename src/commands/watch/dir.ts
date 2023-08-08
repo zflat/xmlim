@@ -8,7 +8,7 @@ import { watchFlags, genSingleFile } from "../../lib";
 
 export default class WatchDir extends Command {
   static description =
-    "Find all XML files in DIR and watch them for changes.\nRe-generate diagrams for the XML files that change."
+    "Find all XML files in DIR and watch them for changes.\nRe-generate diagrams for the XML files that change.";
 
   static examples = ["<%= config.bin %> <%= command.id %> ./example_files/"];
 
