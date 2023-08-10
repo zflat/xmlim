@@ -33,7 +33,7 @@ $ npm install -g xmlim
 $ xmlim COMMAND
 running command...
 $ xmlim (--version)
-xmlim/0.0.0 linux-x64 node-v18.15.0
+xmlim/0.1.0 linux-x64 node-v18.15.0
 $ xmlim --help [COMMAND]
 USAGE
   $ xmlim COMMAND
