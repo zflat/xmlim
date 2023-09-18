@@ -27,4 +27,4 @@ EXAMPLES
   $ xmlim gen data.xml
 ```
 
-_See code: [dist/commands/gen/index.ts](https://github.com/zflat/xmlim/blob/v0.0.0/dist/commands/gen/index.ts)_
+_See code: [dist/commands/gen/index.ts](https://github.com/zflat/xmlim/blob/v0.1.0/dist/commands/gen/index.ts)_
